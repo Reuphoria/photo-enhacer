@@ -6,5 +6,18 @@ CONFIG = {
     "upscale": 2,
     "arch": "clean",
     "channel_multiplier": 2,
-    "enhancement_weight": 0.5
+    #artificial a 0 a 1
+    "enhancement_weight": 0.5,
+
+    #ui
+    #formato permitido
+    "allowed_formats": ['jpg','jpeg','png']
+
+    
+}
+
+PAGE_CONFIG = {
+    "page_title": "Mejorador de Fotos con IA",
+    "page_icon": "🚀",
+    "layout": "centered"
 }

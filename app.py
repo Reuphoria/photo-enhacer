@@ -1,23 +1,30 @@
 from src.models import ImageEnhancer
 from src.utils import pil_to_bgr, bgr_to_pil, load_image
+from src.ui import (
+    render_header,
+    render_file_uploader,
+    render_instructions,
+    render_interative_slider,
+    render_downloader_button
+
+    
+)
+import streamlit as st
+from config import PAGE_CONFIG
+st.set_page_config(**PAGE_CONFIG)
+
 
 def main():
-    # cargar una imagen como PIL usando la funcion auxiliar
-    with open('C:\\Users\\Ricardo Meneses\\Documents\\Proyecto_Git\\photo-enhacer\\imagen1.jpg', "rb") as f:
-        image_pil = load_image(f)
+    "funcion aplicacion"
+    render_header()
 
-    # convertir de pil a bgr
-    image_bgr = pil_to_bgr(image_pil)
+    #Inicializar el modelo
+    enhacer = ImageEnhancer()
+    st.success("Modelos Listos")
 
-    # crear el odjeto enhancer y restaurar
-    enhancer = ImageEnhancer()
-    restored_bgr = enhancer.enhance(image_bgr)
-
-    #convertir de BGR a PIL
-    restored_pil = bgr_to_pil(restored_bgr)
-
-    #guardar la imagen en disco
-    restored_pil.save("C:\\Users\\Ricardo Meneses\\Documents\\Proyecto_Git\\photo-enhacer\\imagen1_restored.jpg")
+    #Subir fichero
+    uploaded_file 
 
 if __name__ == "__main__":
     main()
+
